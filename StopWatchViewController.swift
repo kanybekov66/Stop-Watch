@@ -23,17 +23,33 @@ class StopWatchViewController: UIViewController {
         resetButton.isEnabled = false
         pauseButton.isEnabled = false
         startButton.isEnabled = true
+        
+        startButton.layer.cornerRadius = startButton.bounds.width / 2
+        pauseButton.layer.cornerRadius = pauseButton.bounds.width / 2
+        resetButton.layer.cornerRadius = resetButton.bounds.width / 2
+        
     }
     
     
     @IBAction func resetDidTap(_ sender: Any)
     {
-        
+         timer.invalidate()
+        isTimerRunning = false
+        counter = 0.0
+        timerLabel.text = "00:00:00"
+        resetButton.isEnabled = false
+        pauseButton.isEnabled = false
+        startButton.isEnabled = true
     }
     
     @IBAction func pauseDidTap(_ sender: Any)
     {
+        resetButton.isEnabled = true
+        startButton.isEnabled = true
+        pauseButton.isEnabled = false
         
+        isTimerRunning = false
+        timer.invalidate()
     }
     
     @IBAction func startDidTap(_ sender: Any)
@@ -50,7 +66,29 @@ class StopWatchViewController: UIViewController {
     
     @objc func runTimer() {
         counter += 0.1
-        timerLabel.text = "\(counter)"
+        let flooredCounter = Int(floor(counter))
+        let hour = flooredCounter / 3600 // one hour = 3600 sec
+        var hourString = "\(hour)"
+        if hour < 10 {
+            hourString = "0\(hour)"
+        }
+        
+        let minute = (flooredCounter % 3600) / 60
+        var minuteString = "\(minute)"
+        if minute < 10 {
+            minuteString = "0\(minute)"
+        }
+        
+        let second = (flooredCounter % 3600) % 60
+        var secondString = "\(second)"
+        if second < 10 {
+            secondString = "0\(second)"
+        }
+        
+        timerLabel.text = "\(hourString):\(minuteString):\(secondString)"
+        
+        
     }
 }
+
 
