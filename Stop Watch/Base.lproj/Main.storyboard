@@ -83,9 +83,25 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kft-PV-blq">
+                                <rect key="frame" x="304" y="616" width="55" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="MuO-h8-Wzk"/>
+                                    <constraint firstAttribute="height" constant="35" id="lHc-XB-atX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                <state key="normal" title="Timer">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="T3Y-0e-adL" kind="presentation" id="k2a-xF-1Ic"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kft-PV-blq" secondAttribute="bottom" constant="16" id="129-C7-OOq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kft-PV-blq" secondAttribute="trailing" constant="16" id="EUY-pW-LM7"/>
                             <constraint firstItem="KN8-Tu-Ano" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zvP-6S-dmr"/>
                             <constraint firstItem="KN8-Tu-Ano" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zzV-jd-XjD"/>
                         </constraints>
@@ -101,6 +117,106 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="112.8" y="-138.0809595202399"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="wcc-R6-dxt">
+            <objects>
+                <viewController id="T3Y-0e-adL" customClass="TimerViewController" customModule="Stop_Watch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="chF-nz-1I9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjL-jl-wnv">
+                                <rect key="frame" x="57.5" y="236" width="260" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="G4k-6B-WMX"/>
+                                    <constraint firstAttribute="height" constant="50" id="hDk-Hb-qQs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="163" translatesAutoresizingMaskIntoConstraints="NO" id="NSm-Lj-rUw">
+                                <rect key="frame" x="31" y="381" width="313" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWa-4P-ZWM">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="P2A-KL-4YQ"/>
+                                            <constraint firstAttribute="width" constant="75" id="YGl-rj-ACt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="start:" destination="T3Y-0e-adL" eventType="touchUpInside" id="nHr-mk-kx8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIH-m1-B95">
+                                        <rect key="frame" x="238" y="0.0" width="75" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="6gm-dJ-neT"/>
+                                            <constraint firstAttribute="height" constant="50" id="Fcf-Nw-HAg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stop:" destination="T3Y-0e-adL" eventType="touchUpInside" id="xXh-jY-s7o"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="5" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="uWX-CR-Jzw">
+                                <rect key="frame" x="33" y="316" width="309" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="305" id="9SB-9U-96S"/>
+                                    <constraint firstAttribute="height" constant="35" id="e1e-Lw-EEP"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="slider:" destination="T3Y-0e-adL" eventType="valueChanged" id="zcO-QQ-H7M"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELr-9h-yt6">
+                                <rect key="frame" x="304" y="616" width="55" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="hD6-So-5Ne"/>
+                                    <constraint firstAttribute="height" constant="35" id="vPA-8C-zn6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="SEI-ZA-kXh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uWX-CR-Jzw" firstAttribute="centerY" secondItem="chF-nz-1I9" secondAttribute="centerY" id="Fie-Ht-vWB"/>
+                            <constraint firstItem="uWX-CR-Jzw" firstAttribute="top" secondItem="DjL-jl-wnv" secondAttribute="bottom" constant="30" id="GfL-qP-2cm"/>
+                            <constraint firstItem="7Hm-ER-Sd6" firstAttribute="trailing" secondItem="ELr-9h-yt6" secondAttribute="trailing" constant="16" id="Npo-A1-Kvg"/>
+                            <constraint firstItem="NSm-Lj-rUw" firstAttribute="top" secondItem="uWX-CR-Jzw" secondAttribute="bottom" constant="30" id="Zhv-f5-plM"/>
+                            <constraint firstItem="uWX-CR-Jzw" firstAttribute="centerX" secondItem="DjL-jl-wnv" secondAttribute="centerX" id="ciE-20-rTJ"/>
+                            <constraint firstItem="7Hm-ER-Sd6" firstAttribute="bottom" secondItem="ELr-9h-yt6" secondAttribute="bottom" constant="16" id="hN7-4I-4It"/>
+                            <constraint firstItem="uWX-CR-Jzw" firstAttribute="centerX" secondItem="chF-nz-1I9" secondAttribute="centerX" id="pgZ-u6-nLG"/>
+                            <constraint firstItem="NSm-Lj-rUw" firstAttribute="centerX" secondItem="uWX-CR-Jzw" secondAttribute="centerX" id="zxg-hp-KGa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Hm-ER-Sd6"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="DjL-jl-wnv" id="RW3-uh-2xA"/>
+                        <outlet property="sliderOutlet" destination="uWX-CR-Jzw" id="OtQ-pN-YsR"/>
+                        <outlet property="startOutlet" destination="EWa-4P-ZWM" id="NUW-6U-pPS"/>
+                        <outlet property="stopOutlet" destination="GIH-m1-B95" id="FUW-Ip-S2m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jX-Px-Uux" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941.60000000000002" y="-138.0809595202399"/>
         </scene>
     </scenes>
 </document>

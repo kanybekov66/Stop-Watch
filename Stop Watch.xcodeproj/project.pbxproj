@@ -12,6 +12,7 @@
 		5E20B16A2256CB0300727DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E20B1692256CB0300727DAD /* Assets.xcassets */; };
 		5E20B16D2256CB0300727DAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E20B16B2256CB0300727DAD /* LaunchScreen.storyboard */; };
 		5E20B1752256CF9500727DAD /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20B1742256CF9500727DAD /* StopWatchViewController.swift */; };
+		5ECB18372264992F005979A5 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB18362264992F005979A5 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5E20B16C2256CB0300727DAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E20B16E2256CB0300727DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E20B1742256CF9500727DAD /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
+		5ECB18362264992F005979A5 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 			isa = PBXGroup;
 			children = (
 				5E20B1742256CF9500727DAD /* StopWatchViewController.swift */,
+				5ECB18362264992F005979A5 /* TimerViewController.swift */,
 				5E20B1612256CB0100727DAD /* Stop Watch */,
 				5E20B1602256CB0100727DAD /* Products */,
 			);
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E20B1752256CF9500727DAD /* StopWatchViewController.swift in Sources */,
+				5ECB18372264992F005979A5 /* TimerViewController.swift in Sources */,
 				5E20B1632256CB0200727DAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
